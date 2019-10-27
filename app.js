@@ -19,8 +19,10 @@ app.use(bodyParser.json());
 
 
 const userRoutes = require('./api/routes/user');
+const bookroomRoutes = require('./api/routes/bookroom');
 
 app.use('/user', userRoutes);
+app.use('/bookroom', bookroomRoutes);
 
 
 app.use((req, res, next) => {
