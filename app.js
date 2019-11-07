@@ -23,10 +23,12 @@ app.use(cors());
 const userRoutes = require('./api/routes/user');
 const bookroomRoutes = require('./api/routes/bookroom');
 const bookhallRoutes = require('./api/routes/bookhall');
+const contactRoutes = require('./api/routes/contact');
 
 app.use('/user', userRoutes);
 app.use('/bookroom', bookroomRoutes);
 app.use('/bookhall', bookhallRoutes);
+app.use('/contact', contactRoutes);
 
 
 app.use((req, res, next) => {
@@ -41,7 +43,7 @@ app.use((req, res, next) => {
 //     }
 //     next();
 // });
-// 
+//
 //
 // app.use((req,res,next)=>{
 //     const error = new Error('Not Found');
