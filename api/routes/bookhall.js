@@ -22,8 +22,8 @@ router.post('/', (req,res,next) => {
 
     const bookingdate = req.body.bookingdate;
 
-    const bookingday = parseInt(bookingdate.slice(0,2), 10);
-    const bookingmonth = parseInt(bookingdate.slice(3,5), 10)-1;
+    const bookingmonth = parseInt(bookingdate.slice(0,2), 10);
+    const bookingday = parseInt(bookingdate.slice(3,5), 10)-1;
     const bookingyear = parseInt(bookingdate.slice(6,10),10);
 
     console.log(nowday , " ", nowmonth, " ", nowyear);
