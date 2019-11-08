@@ -10,7 +10,9 @@ router.post('/', (req,res,next) => {
   const hall = new Hall({
     _id : new mongoose.Types.ObjectId(),
     name : req.body.name,
-    bookingdate : req.body.bookingdate
+    bookingdate : req.body.bookingdate,
+    requirement : req.body.requirement,
+    facilities : req.body.facilities
   });
   hall.save()
   .then(result => {
